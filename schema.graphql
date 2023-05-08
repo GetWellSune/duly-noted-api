@@ -19,7 +19,10 @@ type Query {
     ): Note
 
     "Get all notes"
-    notes: [Note]
+    notes (
+        "Optional. If it is true, you can see archived notes."
+        includeArchived: Boolean
+    ): [Note]
 }
 
 "A note"
